@@ -3,7 +3,6 @@ var tableData = data;
 
 // YOUR CODE HERE!
 
-// Load whole dataset as default upon loading page
 let tab = d3.select('.table')
 
 tableData.forEach((entry) => {
@@ -26,7 +25,7 @@ button.on("click", function() {
     filtered_table.forEach((entry) => {
         let new_row = tab.append('tr');
         Object.entries(entry).forEach(([key, value]) => {
-            let cell = new_row.append("td").attr('id','ufo_event');
+            let cell = new_row.append("td");
             cell.text(value);
         });
     });
@@ -45,7 +44,7 @@ document.addEventListener('submit', function(event) {
     filtered_table.forEach((entry) => {
         let new_row = tab.append('tr');
         Object.entries(entry).forEach(([key, value]) => {
-            let cell = new_row.append("td").attr('id','ufo_event');
+            let cell = new_row.append("td");
             cell.text(value);
         });
     });
